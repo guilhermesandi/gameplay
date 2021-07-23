@@ -8,6 +8,8 @@ import { categories } from '../../utils/categories';
 
 import { styles } from './styles';
 import PlayerSvg from '../../assets/player.svg';
+import CalendarSvg from '../../assets/calendar.svg';
+
 import { theme } from '../../global/styles/theme';
 
 export type GuildProps = {
@@ -47,15 +49,25 @@ export function Appointment({ data, ...rest }: Props) {
             </Text>
           </View>
 
-          <View style={styles.playersInfo}>
-            <PlayerSvg fill={owner ? primary : on} />
+          <View style={styles.footer}>
+            <View style={styles.dateInfo}>
+              <CalendarSvg />
 
-            <Text style={[
-              styles.players,
-              { color: owner ? primary : on }
-            ]}>
-              {owner ? 'Anfitrião' : 'Visitante'}
-            </Text>
+              <Text style={styles.date}>
+                {data.date}
+              </Text>
+            </View>
+
+            <View style={styles.playersInfo}>
+              <PlayerSvg fill={owner ? primary : on} />
+
+              <Text style={[
+                styles.player,
+                { color: owner ? primary : on }
+              ]}>
+                {owner ? 'Anfitrião' : 'Visitante'}
+              </Text>
+            </View>
           </View>
         </View>
       </View>
