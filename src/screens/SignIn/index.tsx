@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -17,9 +17,7 @@ import { styles } from './styles';
 
 export function SignIn() {
   const navigation = useNavigation();
-
   const { user } = useAuth();
-  console.log(user);
 
   function handleSignIn() {
     navigation.navigate('Home');
