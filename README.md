@@ -45,7 +45,9 @@
 3- Instale as dependências:
 $ yarn install
 
-4- Inicie a aplicação:
+4- Configure o .env, há um exemplo de quais informações em .env.example. Esses dados você consegue através do painel de desenvolvedor do Discord (https://discord.com/developers/applications)
+
+5- Inicie a aplicação:
 $ yarn start
 ```
 
